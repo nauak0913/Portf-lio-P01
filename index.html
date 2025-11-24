@@ -7,8 +7,258 @@
 </head>
 <body>
     
-helo world
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio de Projetos</title>
+    <style>
+        /* Variáveis de Cores */
+        :root {
+            --cor-fundo: #121212; /* Preto Quase Total */
+            --cor-texto-principal: #E0E0E0; /* Cinza Claro para Texto */
+            --cor-destaque-azul: #007ACC; /* Azul Vívido para Destaques */
+            --cor-secundaria: #333333; /* Cinza Escuro para Blocos/Containers */
+            --cor-borda: #444444;
+        }
 
+        /* Estilos Globais */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto-principal);
+            line-height: 1.6;
+        }
+
+        /* Estilo do Cabeçalho (Header) */
+        header {
+            background-color: var(--cor-secundaria);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--cor-destaque-azul);
+        }
+
+        /* Estilo do Logo/Título Principal */
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--cor-destaque-azul);
+        }
+
+        /* Estilo da Navegação (Menu) */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--cor-texto-principal);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--cor-destaque-azul);
+        }
+
+        /* Estilo do Container da Imagem de Perfil */
+        .profile-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilo da Imagem de Perfil (Arredondada e Pequena) */
+        .profile-pic {
+            width: 50px; /* Tamanho pequeno */
+            height: 50px;
+            border-radius: 50%; /* Arredondado (círculo) */
+            object-fit: cover;
+            border: 2px solid var(--cor-destaque-azul);
+            margin-left: 20px;
+        }
+
+        /* Estilo da Seção Principal */
+        main {
+            padding: 40px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilo do Título da Seção */
+        h2 {
+            color: var(--cor-destaque-azul);
+            border-bottom: 2px solid var(--cor-borda);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Container de Projetos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Estilo de Cada Card de Projeto */
+        .project-card {
+            background-color: var(--cor-secundaria);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Espaço para Imagem no Card (Placeholder) */
+        .project-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: var(--cor-borda);
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cor-texto-principal);
+            font-style: italic;
+        }
+        
+        /* Estilo dos Títulos dos Projetos */
+        .project-card h3 {
+            color: var(--cor-destaque-azul);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo do Rodapé (Footer) */
+        footer {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto-principal);
+            text-align: center;
+            padding: 20px 0;
+            border-top: 3px solid var(--cor-destaque-azul);
+            margin-top: 40px;
+        }
+
+        /* Container de Redes Sociais no Rodapé */
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: var(--cor-destaque-azul);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--cor-texto-principal);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Meu Portfólio</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="profile-container">
+            <img src="https://via.placeholder.com/50/007ACC/FFFFFF?text=Foto" alt="Minha Foto de Perfil" class="profile-pic">
+        </div>
+    </header>
+
+    <main>
+
+        <section id="inicio">
+            <h2>👋 Olá! Eu sou [Seu Nome]</h2>
+            <p style="text-align: center;">Sou desenvolvedor focado em [Sua Área de Atuação]. Bem-vindo(a) ao meu portfólio de projetos. Explore meus trabalhos abaixo.</p>
+        </section>
+
+        <hr style="border-color: var(--cor-secundaria);">
+
+        <section id="projetos">
+            <h2>💻 Meus Projetos</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        [IMAGEM DO PROJETO 1]
+                    </div>
+                    <h3>Projeto Alpha</h3>
+                    <p>
+                        <strong style="color: var(--cor-destaque-azul);">Descrição:</strong> Este é um espaço reservado (placeholder) para a descrição do seu primeiro projeto. Aqui você deve detalhar os objetivos, tecnologias utilizadas (HTML, CSS, JS, etc.) e os resultados alcançados. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        [IMAGEM DO PROJETO 2]
+                    </div>
+                    <h3>Projeto Beta</h3>
+                    <p>
+                        <strong style="color: var(--cor-destaque-azul);">Descrição:</strong> Mais um espaço reservado para um projeto. Use este bloco para falar sobre o seu segundo projeto, o desafio que ele representou e as soluções que você implementou. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-placeholder">
+                        [IMAGEM DO PROJETO 3]
+                    </div>
+                    <h3>Projeto Gamma</h3>
+                    <p>
+                        <strong style="color: var(--cor-destaque-azul);">Descrição:</strong> Este é o terceiro projeto. Descreva aqui o impacto do projeto, suas funcionalidades principais e quaisquer métricas de sucesso que possa incluir. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="sobre" style="margin-top: 50px;">
+            <h2>👤 Sobre Mim</h2>
+            <p style="text-align: center;">Este é um espaço reservado para você contar a sua história, sua experiência e o que te motiva no mundo da tecnologia. [Texto Placeholder: Adicione aqui sua biografia profissional.]</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 [Seu Nome]. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="#" target="_blank">LinkedIn</a> |
+            <a href="#" target="_blank">GitHub</a> |
+            <a href="#" target="_blank">Instagram</a> 
+            </div>
+    </footer>
+
+</body>
+</html>
 
 
     
