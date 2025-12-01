@@ -1,0 +1,422 @@
+/* Variáveis de Cores */
+:root {
+    --cor-fundo: #121212; /* Preto Quase Total */
+    --cor-texto-principal: #E0E0E0; /* Cinza Claro para Texto */
+    --cor-destaque-azul: #042b46; /* Azul Vívido para Destaques */
+    --cor-secundaria: #333333; /* Cinza Escuro para Blocos/Containers */
+    --cor-borda: #444444;
+    --cor-destaque-azul-claro: #0a4a75;
+}
+
+/* Estilos Globais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+}
+
+/* Estilo do Cabeçalho (Header) */
+header {
+    background-color: var(--cor-secundaria);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--cor-destaque-azul);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Estilo do Logo/Título Principal */
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--cor-destaque-azul);
+}
+
+/* Estilo da Navegação (Menu) */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque-azul);
+    background-color: rgba(4, 43, 70, 0.1);
+}
+
+/* Estilo do Container da Imagem de Perfil */
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo da Imagem de Perfil (Arredondada e Pequena) */
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cor-destaque-azul);
+    margin-left: 20px;
+}
+
+/* Estilo da Seção Principal */
+main {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo do Título da Seção */
+h2 {
+    color: var(--cor-destaque-azul);
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.section-divider {
+    border-color: var(--cor-secundaria);
+    margin: 40px 0;
+}
+
+/* Container de Projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo de Cada Card de Projeto */
+.project-card {
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagem do projeto */
+.project-image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--cor-destaque-azul);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto-principal);
+    font-size: 3em;
+}
+
+/* Estilo dos Títulos dos Projetos */
+.project-card h3 {
+    color: var(--cor-destaque-azul);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Tags de tecnologias */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tech-tag {
+    background-color: var(--cor-destaque-azul);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+/* Botão do projeto */
+.project-btn {
+    background-color: var(--cor-destaque-azul);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: var(--cor-destaque-azul-claro);
+}
+
+/* Seção Sobre Mim */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about-text ul {
+    padding-left: 20px;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+}
+
+/* Habilidades */
+.skills h3 {
+    color: var(--cor-destaque-azul);
+    margin-bottom: 20px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: var(--cor-borda);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--cor-destaque-azul);
+    border-radius: 5px;
+}
+
+/* Seção Contato */
+.contact-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-info h3 {
+    color: var(--cor-destaque-azul);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    color: var(--cor-texto-principal);
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form button {
+    background-color: var(--cor-destaque-azul);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--cor-destaque-azul-claro);
+}
+
+/* Estilo do Rodapé (Footer) */
+footer {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-principal);
+    text-align: center;
+    padding: 30px 0;
+    border-top: 3px solid var(--cor-destaque-azul);
+    margin-top: 40px;
+}
+
+/* Container de Redes Sociais no Rodapé */
+.social-links {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: var(--cor-destaque-azul);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-links a:hover {
+    color: var(--cor-texto-principal);
+}
+
+/* Botão voltar ao topo */
+.back-to-top {
+    background-color: var(--cor-destaque-azul);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-to-top:hover {
+    background-color: var(--cor-destaque-azul-claro);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: var(--cor-secundaria);
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.close-modal {
+    color: var(--cor-texto-principal);
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--cor-destaque-azul);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .profile-container {
+        margin-top: 15px;
+    }
+    
+    main {
+        padding: 20px 15px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
